@@ -1,0 +1,17 @@
+To run the Project
+
+Open 2 terminal
+
+on the first terminal Run:
+
+    npn run watch
+
+    (note: make sure to use updated nvm version and setup the tailwind first
+    npm install -D tailwindcss
+    npx tailwindcss init
+
+    )
+
+on the second terminal Run:
+    make run
+

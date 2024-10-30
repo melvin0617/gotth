@@ -1,0 +1,67 @@
+package pages
+
+import (
+    "gotth/model"
+    "strconv"
+)
+
+templ UpdateProduct(val string, product model.Product) {
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+        <title>Update Product</title>
+    </head>
+    <body class="bg-gray-100">
+        <div id="id" style="display:none;">{val}</div>
+        <div class="container mx-auto p-5">
+            <h1 class="text-2xl font-bold mb-4">Update Product</h1>
+            
+            <form hx-post="/product/update?id=" hx-target="#response-message" hx-swap="innerHTML" method="POST">
+                <input type="hidden" name="id" id="product-id" value={val}>
+                <div id="product-form">
+                    <!-- Product fields will be populated here -->
+                    <label class="block mb-1">Name:</label>
+                    <input type="text" name="name" value={product.Name} class="p-2 border rounded mb-2 w-1/3" required>
+                    
+                    <label class="block mb-1">Category:</label>
+                    <input type="text" name="category" value={product.Category} class="p-2 border rounded mb-2 w-1/3" required>
+                    
+                    <label class="block mb-1">Quantity:</label>
+                    <input type="number" name="quantity" value={strconv.Itoa(product.Quantity)} class="p-2 border rounded mb-2 w-1/3" required>
+                    
+                    <label class="block mb-1">Unit Price:</label>
+                    <input type="number" name="unit_price" value={strconv.FormatFloat(product.UnitPrice, 'f', -1, 64)} class="p-2 border rounded mb-2 w-1/3" required>
+                    <br>
+                    <button type="submit" class="bg-blue-500 text-white p-2 rounded">Update Product</button>
+                    // <button type="submit" hx-post="/product/update" hx-target="#response-message" class="bg-blue-500 text-white p-2 rounded">Update Product</button>
+                </div>
+            </form>
+
+            <div id="response-message" class="mt-4"></div>
+        </div>
+        
+        <script>
+            // Automatically trigger the HTMX request when the page loads
+            document.addEventListener("DOMContentLoaded", function() {
+                const id = document.getElementById("id").innerHTML; 
+                if (id) {
+                    document.querySelector('form').setAttribute('hx-post', `/product/update?id=${id}`);
+                }
+
+				console.log(id);
+            });
+
+            document.body.addEventListener("htmx:afterRequest", function(event) {
+                if (event.detail.xhr.status === 200) { // check for a successful response
+                    window.location.href = "/viewproduct"; // redirect to /viewproduct
+                }
+            });
+
+        </script>
+    </body>
+    </html>
+}
