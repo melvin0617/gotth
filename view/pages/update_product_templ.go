@@ -34,14 +34,14 @@ func UpdateProduct(val string, product model.Product) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><script src=\"https://cdn.tailwindcss.com\"></script><script src=\"https://unpkg.com/htmx.org@1.8.4\"></script><title>Update Product</title></head><body class=\"bg-gray-100\"><div id=\"id\" style=\"display:none;\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><script src=\"https://unpkg.com/htmx.org@1.8.4\"></script><title>Update Product</title></head><body class=\"bg-gray-100\"><div id=\"id\" style=\"display:none;\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(val)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 19, Col: 47}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 18, Col: 47}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -54,7 +54,7 @@ func UpdateProduct(val string, product model.Product) templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(val)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 24, Col: 73}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 23, Col: 73}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -67,7 +67,7 @@ func UpdateProduct(val string, product model.Product) templ.Component {
 		var templ_7745c5c3_Var4 string
 		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(product.Name)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 28, Col: 70}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 27, Col: 70}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
@@ -80,7 +80,7 @@ func UpdateProduct(val string, product model.Product) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(product.Category)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 31, Col: 78}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 30, Col: 78}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
@@ -93,7 +93,7 @@ func UpdateProduct(val string, product model.Product) templ.Component {
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(strconv.Itoa(product.Quantity))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 34, Col: 94}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 33, Col: 94}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
@@ -106,13 +106,13 @@ func UpdateProduct(val string, product model.Product) templ.Component {
 		var templ_7745c5c3_Var7 string
 		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(strconv.FormatFloat(product.UnitPrice, 'f', -1, 64))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 37, Col: 117}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/pages/update_product.templ`, Line: 36, Col: 117}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"p-2 border rounded mb-2 w-1/3\" required><br><button type=\"submit\" class=\"bg-blue-500 text-white p-2 rounded\">Update Product</button></div></form><div id=\"response-message\" class=\"mt-4\"></div></div><script>\n            // Automatically trigger the HTMX request when the page loads\n            document.addEventListener(\"DOMContentLoaded\", function() {\n                const id = document.getElementById(\"id\").innerHTML; // Use Go templating to get ID\n                if (id) {\n                    document.querySelector('form').setAttribute('hx-post', `/product/update?id=${id}`);\n                    // document.querySelector('form').dispatchEvent(new Event('submit'));\n                }\n\n\t\t\t\tconsole.log(id);\n            });\n\n            document.body.addEventListener(\"htmx:afterRequest\", function(event) {\n                if (event.detail.xhr.status === 200) { // check for a successful response\n                    window.location.href = \"/viewproduct\"; // redirect to /viewproduct\n                }\n            });\n\n        </script></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"p-2 border rounded mb-2 w-1/3\" required><br><button type=\"submit\" class=\"bg-blue-500 text-white p-2 rounded\">Update Product</button></div></form><div id=\"response-message\" class=\"mt-4\"></div></div><script>\n            // Automatically trigger the HTMX request when the page loads\n            document.addEventListener(\"DOMContentLoaded\", function() {\n                const id = document.getElementById(\"id\").innerHTML; \n                if (id) {\n                    document.querySelector('form').setAttribute('hx-post', `/product/update?id=${id}`);\n                }\n\n\t\t\t\tconsole.log(id);\n            });\n\n            document.body.addEventListener(\"htmx:afterRequest\", function(event) {\n                if (event.detail.xhr.status === 200) { // check for a successful response\n                    window.location.href = \"/viewproduct\"; // redirect to /viewproduct\n                }\n            });\n\n        </script></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
